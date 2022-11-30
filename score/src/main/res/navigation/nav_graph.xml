@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/frag_main"
+    android:id="@+id/nav_graph">
+
+    <fragment
+        android:id="@+id/frag_main"
+        android:name="com.simulationtechnology.score.presentation.MainFragment"
+        android:label="MainFragment"
+        tools:layout="@layout/fragment_main">
+        <action
+            android:id="@+id/main_to_lesson_mgr"
+            app:destination="@+id/frag_lesson_management"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_left"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_left"/>
+
+        <action
+            android:id="@+id/main_to_operation"
+            app:destination="@+id/frag_operation"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/frag_lesson_management"
+        android:name="com.simulationtechnology.score.presentation.lessonmanagement.LessonManagementFragment"
+        android:label="LoginFragment"
+        tools:layout="@layout/fragment_lesson_management">
+        <action
+            android:id="@+id/login_back_main"
+            app:destination="@+id/frag_main"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/frag_operation"
+        android:name="com.simulationtechnology.score.presentation.operation.OperationFragment"
+        android:label="OperationFragment"
+        tools:layout="@layout/fragment_operation">
+
+    </fragment>
+
+
+</navigation>

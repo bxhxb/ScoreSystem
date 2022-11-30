@@ -1,0 +1,5 @@
+<resources>
+    <string name="lesson_management">教案管理</string>
+    <string name="operation_score">操作打分</string>
+    <string name="statics">统计分析</string>
+</resources>

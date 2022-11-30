@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.simulationtechnology.score.presentation.lessonmanagement.LesssonItemViewModel" />
+
+        <variable
+            name="clickListener"
+            type="android.view.View.OnClickListener" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/lesson_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="@{clickListener}">
+
+        <TextView
+            android:id="@+id/book_name"
+            android:layout_width="300dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:text="@{viewmodel.lessonName}"
+            android:textSize="20sp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <TextView
+            android:id="@+id/author"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:text="@{viewmodel.author}"
+            android:textSize="20sp"
+            app:layout_constraintTop_toTopOf="@+id/book_name"
+            app:layout_constraintLeft_toRightOf="@+id/book_name"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
